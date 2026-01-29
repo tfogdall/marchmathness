@@ -1,0 +1,205 @@
+/* A handy list of color names: https://www.w3schools.com/colors/colors_names.asp */
+
+body {
+    background-color: white;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    min-height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+
+.big-container {
+    width: 75%;
+    text-align: center;
+    font-size: 1em;
+}
+
+.header-image {
+    width: 35vw;
+    height: auto;
+}
+
+.pano-image {
+    width: 50vw;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/*Flex-container and associated elements are based on W3School's 
+flexbox tutorial: https://www.w3schools.com/css/css3_flexbox.asp */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    text-align: center;
+    /*font: Helvetica;*/
+}
+
+.flex-item-left {
+  background-color: #707a84;
+  padding: 5px;
+  flex: 33%;
+  color: white;
+  border-style: solid;
+}
+
+.flex-item-left-focused {
+  background-color: #005eb8;
+  padding: 5px;
+  flex: 33%;
+  color: black;
+  border-style: solid;
+}
+
+.flex-item-middle {
+  background-color: #707a84;
+  padding: 5px;
+  flex: 33%;
+  color: white;
+  border-style: solid;
+}
+
+.flex-item-middle-focused {
+  background-color: #005eb8;
+  padding: 5px;
+  flex: 33%;
+  color: black;
+  border-style: solid;
+}
+
+.flex-item-right {
+  background-color: #707a84;
+  padding: 5px;
+  flex: 33%;
+  color: white;
+  border-style: solid;
+}
+
+.flex-item-right-focused {
+  background-color: #005eb8;
+  padding: 5px;
+  flex: 33%;
+  color: black;
+  border-style: solid;
+}
+
+article {
+    width: 100%;
+    text-align: center;
+    /*font: Helvetica;*/
+    font-weight: 100;
+    font-size: 1em;
+}
+
+h1 {
+  /*font: Helvetica;*/
+  font-size: 1.5em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-top: 1.25em;
+}
+
+h2 {
+  /*font: Helvetica;*/
+  font-size: 1.25em;
+  font-weight: 300;
+  margin-top: 1.25em;
+}
+
+p {
+  width:100%;
+  /*font: Helvetica;*/
+  font-size: 1em;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 30px;
+  margin-bottom: 0.75em;
+}
+
+p strong {
+  font-size: 1.1em;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  float: left;
+  margin-bottom: 0.75em;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #005eb8;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .2s ease;
+}
+
+/*Side-by-side containers with overlaying messages largely borrowed
+from W3School's tutorial on image hover overlay: https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp*/
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 1em;
+  /*letter-spacing: 1px;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text strong {
+  font-size: 1.5em;
+  font-weight: 500;
+  font-style: italic; 
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .header-image {
+    width: 45vw;
+    height: auto;
+  }
+
+  .text {
+    font-size: 0.75em;
+  }
+
+  * {
+    font-size: 1.25em;
+  }
+}
